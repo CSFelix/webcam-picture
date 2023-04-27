@@ -12,15 +12,15 @@
 	***********
 */
 * {
-	color: #f6f6ff;
-	background-color: #363636;
 	margin: 0;
 	padding: 0;
-	outline: none;
-	border: none;
 	list-style: none;
 	text-decoration: none;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
 	vertical-align: baseline;
+}
+
+body {
+	background-color: #363636;
 }

@@ -17,12 +17,21 @@
 		<meta property="og:image" content="./assets/logo.avif" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 
-		<!-- css -->
+		<!-- css libraries -->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" type="text/css" href="./css/libraries/hint.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/libraries/vanillatoasts.css" />
+
+		<!-- css styles -->
 		<link rel="stylesheet" type="text/css" href="./css/styles/global.css" />
 		<link rel="stylesheet" type="text/css" href="./css/styles/sections.css" />
 
 		<!-- js libraries -->
 		<script type="text/javascript" src="./javascript/libraries/webcam-easy.js" defer></script>
+		<script type="text/javascript" src="./javascript/libraries/vanillatoasts.js" defer></script>
+
+		<!-- js scripts -->
+		<script type="text/javascript" src="./javascript/scripts/webcam.js" defer></script>
 	</head>
 
 	<body>
@@ -47,7 +56,9 @@
 					*********************
 				 -->
 				<div id="videoContainer">
-					<!-- TO-DO: add video and canvas tags -->
+					<video id="webcamArea" autoplay playsinline></video>
+					<canvas id="canvasArea"></canvas>
+					<a id="canvasDownload"></a>
 				</div>
 
 				<!-- 
@@ -56,7 +67,11 @@
 					***********************
 				 -->
 				<div id="buttonsContainer">
-					<!-- TO-DO: add buttons with icons -->
+					<span id="turnOnCameraButton" class="material-icons button hint--bottom hint--bounce" aria-label="Turn On Camera">videocam</span>
+					<span id="turnOffCameraButton" class="material-icons button hint--bottom hint--bounce" aria-label="Turn Off Camera">videocam_off</span>
+					<span id="snapPhotoButton" class="material-icons button hint--bottom hint--bounce" aria-label="Snap Photo">add_a_photo</span>
+					<span id="copyPictureButton" class="material-icons button hint--bottom hint--bounce" aria-label="Copy Picture">content_copy</span>
+					<span id="downloadPictureButton" class="material-icons button hint--bottom hint--bounce" aria-label="Download Picture">download</span>
 				</div>
 			</div>
 		</section>
